@@ -43,7 +43,8 @@ const SummonerComponent: FC<ISummonerData> = (summoner) => (
             <img className="card__thumb" src={"http://ddragon.leagueoflegends.com/cdn/10.18.1/img/profileicon/" + summoner.icon + ".png"} alt="" />
             <div className="card__header-text">
                 <h3 className="card__title">{summoner.summonerName}</h3>
-                <span className="card__status">{summoner.tier} {summoner.rank}    {summoner.leaguePoints} LP</span>
+                <span className="card__status">{summoner.tier} {summoner.rank}    {summoner.leaguePoints} LP</span><br />
+                <span className="card__stats">{summoner.wins}/{summoner.losses} - {Math.ceil(summoner.wins / (summoner.wins + summoner.losses) * 100)}%</span>
             </div>
             </div>
             <p className="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>

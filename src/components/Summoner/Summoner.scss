@@ -27,6 +27,7 @@
     .card__image {
         width: 100%;
         height: auto;
+        background-color: #D7BDCA;
     }
 
     .card__overlay {
@@ -88,6 +89,11 @@
     }
 
     .card__status {
+        font-size: .8em;
+        color: #6A515E;
+    }
+
+    .card__stats {
         font-size: .8em;
         color: #6A515E;
     }
