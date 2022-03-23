@@ -17,16 +17,15 @@ function Summoner(props: any) {
 
     useEffect(() => {
         let summonerData: any;
-        summonerService.getSummonerId(props.name).then(accountResponse => {
-            //console.log(accountResponse.data)
-            summonerService.getSummonerInfo(accountResponse.data.id).then(statResponse => {
-                console.log(statResponse.data);
+        summonerService.getSummonerLeagueInfo(props.id).then(statResponse => {
+            summonerService.getSummonerInfo(statResponse.data[0].summonerName).then(accountResponse => {
                 summonerData = getSoloQ(statResponse.data);
                 summonerData.icon = accountResponse.data.profileIconId;
                 summonerData.playerLvl = accountResponse.data.summonerLevel;
                 setSummoner(summonerData);
             })
         })
+        
     }, []);
 
     return (

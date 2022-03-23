@@ -42,7 +42,7 @@ const SummonerComponent: FC<ISummonerData> = (summoner) => (
             <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path d="M 40 80 c 22 0 40 -22 40 -40 v 40 Z" /></svg>
             <img className="card__thumb" src={"http://ddragon.leagueoflegends.com/cdn/10.18.1/img/profileicon/" + summoner.icon + ".png"} alt="" />
             <div className="card__header-text">
-                <h3 className="card__title">{summoner.summonerName}</h3>
+                <h3 className="card__title">{summoner.summonerName === 'ZefMan' ? 'VWordMan': summoner.summonerName}</h3>
                 <span className="card__status">{summoner.tier} {summoner.rank}    {summoner.leaguePoints} LP</span><br />
                 <span className="card__stats">{summoner.wins}/{summoner.losses} - {Math.ceil(summoner.wins / (summoner.wins + summoner.losses) * 100)}%</span>
             </div>
