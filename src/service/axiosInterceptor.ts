@@ -3,8 +3,11 @@ import axios from 'axios';
 export function axiosInterceptor() {
     axios.interceptors.request.use(
        (config) => {
-        config.url += '?api_key=RGAPI-8bc9aa4a-dc72-4ba2-ae9e-51d7ab8e2f2a';
-        return config;
+            if (config.params)
+                config.params['api_key'] = process.env.REACT_APP_RIOT_API_KEY;
+            else
+                config.params = {'api_key': process.env.REACT_APP_RIOT_API_KEY};
+            return config;
     }, (error) => {
         return Promise.reject(error);
     });
