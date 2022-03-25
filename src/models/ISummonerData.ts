@@ -1,4 +1,4 @@
-export default interface SummonerData {
+export default interface ISummonerData {
     summonerName: string,
     tier: string,
     rank: string,
