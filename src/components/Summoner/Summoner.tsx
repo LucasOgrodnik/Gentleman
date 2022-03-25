@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import ISummonerData from '../../models/ISummonerData';
+import ISummonerData from '../../models/ISummonerData.ts';
 import Emblem_Iron from '../../assets/Emblem_Iron.png'
 import Emblem_Bronze from '../../assets/Emblem_Bronze.png'
 import Emblem_Silver from '../../assets/Emblem_Silver.png'
