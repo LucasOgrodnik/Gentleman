@@ -40,7 +40,7 @@ function addDefaultSrc(event: any) {
 }
 
 const SummonerComponent: FC<ISummonerData> = (summoner) => (
-    <div className="SummonerComponent">
+    <div className="SummonerComponent" key={summoner.summonerName}>
         <img src={switchTier(summoner.tier)} className="card__image" alt="" />
         <div className="card__overlay">
             <div className="card__header">

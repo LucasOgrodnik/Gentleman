@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { axiosInterceptor } from './service/axiosInterceptor';
+import { UIProvider } from './service/context';
 
 axiosInterceptor();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UIProvider>
+      <App />
+    </UIProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
